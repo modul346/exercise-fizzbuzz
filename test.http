@@ -1,0 +1,47 @@
+# Als erstes definieren wir die host-adresse
+@hosturl = http://localhost:7071
+
+# Aufruf von FizzBuzz mit einer Zahl, die weder durch 3 oder durch 5 teilbar ist
+GET {{hosturl}}/api/fizzbuzz?number=41
+# Die Antwort sollte "41" lauten
+
+###
+
+# Aufruf von FizzBuzz mit einer Zahl, die durch 3 teilbar ist
+GET {{hosturl}}/api/fizzbuzz?number=36
+# Die Antwort sollte "Fizz" lauten
+
+###
+
+# Aufruf von FizzBuzz mit einer Zahl, die durch 5 teilbar ist
+GET {{hosturl}}/api/fizzbuzz?number=36
+# Die Antwort sollte "Buzz" lauten
+
+###
+
+# Aufruf von FizzBuzz mit einer Zahl, die durch 5 teilbar ist
+GET {{hosturl}}/api/fizzbuzz?number=20
+# Die Antwort sollte "Buzz" lauten
+
+###
+
+# Aufruf von FizzBuzz mit einer Zahl, die sowohl durch 3 als auch durch 5 teilbar ist
+GET {{hosturl}}/api/fizzbuzz?number=60
+# Die Antwort sollte "FizzBuzz" lauten
+
+###
+
+# Was passiert wenn man keine nummer als parameter mit gibt?
+GET {{hosturl}}/api/fizzbuzz
+
+# Die Antwort sollte ein BadRequest sein (Error 400) mit einer entsprechenden Fehlermeldung
+
+###
+
+# Aufruf von FizzBuzz mit dem Parameter number, der keinen numerischen Wert enthält
+GET {{hosturl}}/api/fizzbuzz?number=Hallo
+
+# Die Antwort sollte ein BadRequest sein (Error 400) mit einer entsprechenden Fehlermeldung
+
+###
+
