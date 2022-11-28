@@ -14,12 +14,6 @@ GET {{hosturl}}/api/fizzbuzz?number=36
 ###
 
 # Aufruf von FizzBuzz mit einer Zahl, die durch 5 teilbar ist
-GET {{hosturl}}/api/fizzbuzz?number=36
-# Die Antwort sollte "Buzz" lauten
-
-###
-
-# Aufruf von FizzBuzz mit einer Zahl, die durch 5 teilbar ist
 GET {{hosturl}}/api/fizzbuzz?number=20
 # Die Antwort sollte "Buzz" lauten
 
